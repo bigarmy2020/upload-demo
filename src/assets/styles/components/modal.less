@@ -1,0 +1,104 @@
+@prefix        : ant-modal;
+@custom-prefix : v-modal;
+
+.@{prefix}-root {
+	.@{prefix}-wrap {
+		.@{prefix} {
+			&.@{custom-prefix}-icon {
+				&.icon-info .anticon {
+					color : #1890FF;
+				}
+
+				&.icon-success .anticon {
+					color : #4DBD74;
+				}
+
+				&.icon-error .anticon {
+					color : #F5222D;
+				}
+
+				&.icon-warning .anticon {
+					color : #FAAD14;
+				}
+			}
+
+			&.@{custom-prefix}-alert {
+				.@{prefix}-confirm-body {
+					i {
+						display : none;
+
+						&.blue {
+							color : #1890FF;
+						}
+
+						&.green {
+							color : #4DBD74;
+						}
+					}
+
+					.@{prefix}-confirm-title {
+						text-align : center;
+					}
+
+					.@{prefix}-confirm-content {
+						text-align : center;
+						margin     : 0;
+						padding    : 15px;
+					}
+				}
+
+				&.close-show {
+					.@{prefix}-content {
+						.@{prefix}-close {
+							display : block;
+						}
+					}
+				}
+
+				.@{prefix}-confirm-btns {
+					text-align : center;
+					float      : none;
+
+					button {
+						min-width : 80px;
+					}
+				}
+			}
+
+			&.@{custom-prefix}-confirm {
+				.@{prefix}-confirm-body {
+					i {
+						display : none;
+					}
+
+					.@{prefix}-confirm-title {
+						text-align : center;
+					}
+
+					.@{prefix}-confirm-content {
+						text-align : center;
+						margin     : 0;
+						padding    : 15px;
+					}
+				}
+
+				&.close-show {
+					.@{prefix}-content {
+						.@{prefix}-close {
+							display : block;
+						}
+					}
+				}
+
+				.@{prefix}-confirm-btns {
+					text-align : center;
+					float      : none;
+
+					button {
+						min-width : 80px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+@spin-prefix : ant-spin;
+
+.@{spin-prefix}-nested-loading {
+	&.full-screen-spin {
+		> div > .@{spin-prefix} {
+			position   : absolute;
+			top        : 0;
+			left       : 0;
+			z-index    : 4;
+			display    : block;
+			width      : 100%;
+			height     : 100%;
+			max-height : none;
+		}
+	}
+}

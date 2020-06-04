@@ -1,0 +1,88 @@
+{
+	"name": "upload-demo",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "npm run build:test",
+		"build:test": "vue-cli-service build --max_old_space_size=4096 --mode test",
+		"build:prod": "vue-cli-service build --max_old_space_size=4096 --mode production",
+		"commit": "git-cz",
+		"version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+		"update:version": "npm --no-git-tag-version version patch",
+		"test:unit": "vue-cli-service test:unit",
+		"test:e2e": "vue-cli-service test:e2e",
+		"lint": "vue-cli-service lint",
+		"lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue src/ tests/"
+	},
+	"dependencies": {
+		"@sentry/browser": "5.15.5",
+		"@sentry/integrations": "5.15.5",
+		"ant-design-vue": "1.6.2",
+		"area-data": "5.0.6",
+		"babel-plugin-import": "1.13.0",
+		"clipboard": "2.0.6",
+		"codemirror": "5.54.0",
+		"compression-webpack-plugin": "3.1.0",
+		"core-js": "3.6.5",
+		"dayjs": "1.8.26",
+		"enquire.js": "2.1.6",
+		"js-cookie": "2.2.1",
+		"mini-css-extract-plugin": "0.9.0",
+		"nprogress": "0.2.0",
+		"register-service-worker": "1.7.1",
+		"vconsole-webpack-plugin": "1.5.1",
+		"vue": "2.6.11",
+		"vue-eslint-parser": "7.0.0",
+		"vue-router": "3.1.6",
+		"vuex": "3.3.0",
+		"webpack": "4.43.0",
+		"webpack-bundle-analyzer": "3.7.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "8.3.5",
+		"@commitlint/config-conventional": "8.3.4",
+		"@vue/cli-plugin-babel": "4.3.1",
+		"@vue/cli-plugin-eslint": "4.3.1",
+		"@vue/cli-plugin-pwa": "4.3.1",
+		"@vue/cli-plugin-router": "4.3.1",
+		"@vue/cli-plugin-unit-mocha": "4.3.1",
+		"@vue/cli-plugin-vuex": "4.3.1",
+		"@vue/cli-service": "4.3.1",
+		"axios": "0.19.2",
+		"babel-eslint": "10.1.0",
+		"chai": "4.2.0",
+		"commitizen": "4.1.2",
+		"compression-webpack-plugin": "3.1.0",
+		"conventional-changelog-cli": "2.0.34",
+		"crypto-js": "4.0.0",
+		"cz-conventional-changelog": "3.2.0",
+		"eslint": "6.8.0",
+		"eslint-plugin-vue": "6.2.2",
+		"highlight.js": "10.0.3",
+		"husky": "4.2.5",
+		"less": "3.11.1",
+		"less-loader": "5.0.0",
+		"pre-commit": "1.2.2",
+		"vue-ls": "3.2.1",
+		"vue-template-compiler": "2.6.11"
+	},
+	"pre-commit": [
+		"lint"
+	],
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-conventional-changelog"
+		}
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -e $GIT_PARAMS"
+		}
+	}
+}
